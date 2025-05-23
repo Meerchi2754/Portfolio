@@ -12,9 +12,6 @@ const About = () => {
         <div className="about-image">
           <div className="image-container">
             <img src={profilePic} alt="Profile" />
-            <div className="image-overlay">
-              <p>That's me :)</p>
-            </div>
           </div>
         </div>
         <div className="about-text">
