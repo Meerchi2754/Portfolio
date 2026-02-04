@@ -25,7 +25,8 @@ class ErrorBoundary extends React.Component {
 
 function App() {
   return (
-    <>
+    <ErrorBoundary>
+      <>
       <Nav id="nav" />
       <br />
       <br />
@@ -47,7 +48,8 @@ function App() {
       <section id="contact">
         <Contact />
       </section>
-    </>
+      </>
+    </ErrorBoundary>
   );
 }
 
