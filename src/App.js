@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Skills from "./components/Skills/Skills";
-import Contact from "./components/Contact/Contact";
+import Navbar from "./Component/Navbar/navbar";
+import About from "./Component/About/About";
+import Projects from "./Component/project";
+import Skills from "./Component/skill";
+import Contact from "./Component/Contact";
 
 export default function App() {
   return (

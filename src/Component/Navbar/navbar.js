@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../Component/navbar.css";
+import "./navbar.css";
+
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('Home');
