@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo">
-          <span>Portfolio</span>
+          <span>Portfolio112</span>
         </div>
         <div className="nav-links">
           {navLinks.map((link) => (
