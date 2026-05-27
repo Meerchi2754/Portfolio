@@ -5,7 +5,6 @@ import Projects from "./Component/project";
 import Skills from "./Component/skill";
 import Contact from "./Component/Contact";
 import "./App.css";
-import { SiDarkreader } from "react-icons/si";
 
 export default function App() {
   return (
