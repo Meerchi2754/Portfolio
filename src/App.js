@@ -1,8 +1,11 @@
 import Navbar from "./Component/Navbar/navbar";
+import Hero from "./Component/Hero/Hero";
 import About from "./Component/About/About";
 import Projects from "./Component/project";
 import Skills from "./Component/skill";
 import Contact from "./Component/Contact";
+import "./App.css";
+import { SiDarkreader } from "react-icons/si";
 
 export default function App() {
   return (
@@ -11,9 +14,10 @@ export default function App() {
 
       <main>
         <section id="home">
-          <About />
+          <Hero />
         </section>
 
+      
         <section id="projects">
           <Projects />
         </section>
@@ -21,6 +25,11 @@ export default function App() {
         <section id="skills">
           <Skills />
         </section>
+
+        <section id="about">
+          <About />
+        </section>
+
 
         <section id="contact">
           <Contact />
