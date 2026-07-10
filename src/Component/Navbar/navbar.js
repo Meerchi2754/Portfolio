@@ -10,10 +10,9 @@ const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Me', href: '#about' },
-    { label: 'Projects', href: '#projects' },
+    { label: 'Work', href: '#projects' },
     { label: 'Skills', href: '#skills' },
+    { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' }
   ];
 
@@ -26,15 +25,26 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Meetrajsinh Parmar.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo">
-          <span>Meetraj</span>
+          <a href="#home" onClick={() => setActiveLink('Home')}>
+            <span>Meetraj</span>
+          </a>
         </div>
         
-        {/* Desktop Navigation */}
-        <div className="nav-links desktop-nav">
+        {/* Desktop Navigation - Center */}
+        <div className="nav-links-center desktop-nav">
           {navLinks.map((link) => (
             <a 
               key={link.label}
@@ -45,12 +55,22 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+        </div>
+
+        {/* Right Side Controls */}
+        <div className="nav-right desktop-nav">
           <button 
             className="theme-toggle-btn" 
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
             {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
+          </button>
+          <button 
+            className="resume-btn" 
+            onClick={handleResumeDownload}
+          >
+            Resume
           </button>
         </div>
 
@@ -87,6 +107,15 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <button 
+              className="mobile-resume-btn" 
+              onClick={() => {
+                handleResumeDownload();
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Resume
+            </button>
           </div>
         </div>
       </div>

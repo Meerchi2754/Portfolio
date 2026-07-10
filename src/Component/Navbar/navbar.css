@@ -28,12 +28,13 @@
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px 40px;
+  gap: 20px;
 }
 
 .logo {
@@ -51,6 +52,10 @@
   transition: transform 0.3s ease;
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .logo:hover {
   transform: scale(1.05);
 }
@@ -59,10 +64,20 @@
   display: inline-block;
 }
 
-.nav-links {
+/* Center navigation links */
+.nav-links-center {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+}
+
+/* Right side controls */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
 }
 
 .navbar-links {
@@ -132,7 +147,6 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: 15px;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
@@ -143,6 +157,37 @@
 
 .theme-toggle-btn:active {
   transform: scale(0.95);
+}
+
+/* Resume Button */
+.resume-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.resume-btn:active {
+  transform: translateY(0);
 }
 
 /* Mobile Controls */
@@ -243,8 +288,37 @@
   font-weight: 600;
 }
 
+/* Mobile Resume Button */
+.mobile-resume-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.mobile-resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.mobile-resume-btn:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .nav-container {
+    display: flex;
+    justify-content: space-between;
     padding: 15px 20px;
   }
 
