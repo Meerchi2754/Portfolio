@@ -16,7 +16,6 @@ export default function App() {
           <Hero />
         </section>
 
-      
         <section id="projects">
           <Projects />
         </section>
@@ -28,7 +27,6 @@ export default function App() {
         <section id="about">
           <About />
         </section>
-
 
         <section id="contact">
           <Contact />
